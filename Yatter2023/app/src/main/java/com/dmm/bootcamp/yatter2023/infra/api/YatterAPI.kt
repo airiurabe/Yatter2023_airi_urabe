@@ -29,7 +29,7 @@ interface YatterApi {
     @Query("max_id") maxId: String? = null,
     @Query("since_id") sinceId: String? = null,
     @Query("limit") limit: Int = 80
-  ): List<StatusJson>
+  ): List<StatusJson> //「：」メソッドの帰り値
 
   @POST("accounts")
   suspend fun createNewAccount(

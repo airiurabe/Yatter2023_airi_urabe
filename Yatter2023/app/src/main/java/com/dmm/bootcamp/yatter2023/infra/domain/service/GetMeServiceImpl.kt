@@ -12,4 +12,4 @@ class GetMeServiceImpl(
   override suspend fun execute(): Me? = withContext(Dispatchers.IO) {
     accountRepository.findMe()
   }
-}
+} //自分のIDを取得

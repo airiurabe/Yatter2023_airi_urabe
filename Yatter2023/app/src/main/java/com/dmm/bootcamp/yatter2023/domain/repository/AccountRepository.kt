@@ -8,8 +8,10 @@ import java.net.URL
 
 interface AccountRepository {
   suspend fun findMe(): Me?
+  //?がつくと、返り値がなかった時にnullを返す
 
   suspend fun findByUsername(username: Username): Account?
+  //viewModelで呼べばいい
 
   suspend fun create(
     username: Username,

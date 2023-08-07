@@ -1,7 +1,6 @@
 package com.dmm.bootcamp.yatter2023.infra.domain.model
 
 import com.dmm.bootcamp.yatter2023.domain.model.Account
-import com.dmm.bootcamp.yatter2023.domain.model.AccountId
 import com.dmm.bootcamp.yatter2023.domain.model.Me
 import com.dmm.bootcamp.yatter2023.domain.model.Username
 import java.net.URL
@@ -11,8 +10,8 @@ class MeImpl(
   username: Username,
   displayName: String?,
   note: String?,
-  avatar: URL,
-  header: URL,
+  avatar: URL?,
+  header: URL?,
   followingCount: Int,
   followerCount: Int,
 ) : Me(

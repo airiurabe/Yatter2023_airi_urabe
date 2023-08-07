@@ -6,13 +6,14 @@ import com.dmm.bootcamp.yatter2023.domain.service.LoginService
 import com.dmm.bootcamp.yatter2023.infra.pref.MePreferences
 
 class LoginServiceImpl(
-  private val mePreferences: MePreferences
+    private val mePreferences: MePreferences
 ) : LoginService {
 
-  override suspend fun execute(
-    username: Username,
-    password: Password
-  ) {
-    mePreferences.putUserName(username.value)
-  }
+    override suspend fun execute(
+        username: Username,
+        password: Password
+    ) {
+        mePreferences.putUserName(username.value)
+        //  mePreferences.putUserName(username.value) API制限したver.
+    }
 }
